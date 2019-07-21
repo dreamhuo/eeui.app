@@ -12,5 +12,11 @@
 3、App设置
     根目录下执行命令：eeui setting
 
+4、升级程序
+    先升级 eeui-cli
+    npm update eeui-cli -g
+    项目根目录下执行：eeui update
+
+
 
 
