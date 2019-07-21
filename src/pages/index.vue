@@ -10,7 +10,9 @@
         </navbar>
 
         <scroll-view class="list">
-            <text>这里是内容111</text>
+            <div class="bg">
+                <image src="./logo-white.png" style="height: 400; margin-left: 20;"></image>
+            </div>
         </scroll-view>
 
     </div>
@@ -26,7 +28,12 @@
         width: 750px;
         height: 100px;
     }
-
+    .bg{background-color: #f00;}
+    .bg image{
+        display: block;
+        width: 100;
+        height: auto!important;
+    }
     .navbar-main {
         flex-direction: row;
         align-items: center;

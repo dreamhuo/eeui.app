@@ -4,8 +4,8 @@
 	"applicationID": "app.demo.com",
 	"bundleIdentifier": "app.demo.com",
 	"release": "1.0.5",
-	"versionCode": "1.0",
-	"versionName": "1.0",
-	"CFBundleVersion": "1.0",
-	"CFBundleShortVersionString": "1.0"
+	"versionCode": "2",
+	"versionName": "2",
+	"CFBundleVersion": "2",
+	"CFBundleShortVersionString": "2"
 }
