@@ -1,6 +1,14 @@
 ﻿1、生成图标工具
-     https://console.eeui.app/#/tools/icons
-     ios图标目录：
-     platforms/ios/eeuiApp/eeuiApp/Assets.xcassets/AppIcon.appiconset
-     安卓图标目录：
-     eeui.app\platforms\android\eeuiApp\app\src\main\res
+    https://console.eeui.app/#/tools/icons
+    ios图标目录：
+    platforms/ios/eeuiApp/eeuiApp/Assets.xcassets/AppIcon.appiconset
+    安卓图标目录：
+    eeui.app\platforms\android\eeuiApp\app\src\main\res
+2、生成启动图片
+    打开启动图生成工具https://console.eeui.app/#/tools/launchimage上传并生成启动图
+    iOS覆盖路径为：platforms/ios/eeuiApp/eeuiApp/Assets.xcassets/LaunchImage.launchimage/
+    Android覆盖路径为：platforms/android/eeuiApp/app/src/main/res/drawable-xxxx-xxxxx/
+
+
+
+
