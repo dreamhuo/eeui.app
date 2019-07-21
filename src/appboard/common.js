@@ -1,25 +1,26 @@
 Vue.mixin({
     methods: {
+        // 判断是否为 null 或为 undefined
         isNullOrUndefined(obj) {
             return typeof obj === "undefined" || obj === null;
         },
-
+        // 判断是否是一个函数
         isFunction(obj) {
             return this.isNullOrUndefined(obj) ? false : typeof obj === "function"
         },
-
+        // 判断是否是一个对象
         isObject(obj) {
             return this.isNullOrUndefined(obj) ? false : typeof obj === "object";
         },
-
+        // 判断是一个类数组
         likeArray(obj) {
             return this.isNullOrUndefined(obj) ? false : typeof obj.length === 'number';
         },
-
+        // 判断是一个json
         isJson(obj) {
             return this.isObject(obj) && !this.likeArray(obj);
         },
-
+        // 获取给定 keys 的对象
         getObject(obj, keys) {
             let object = obj;
             if (this.count(obj) === 0 || this.count(keys) === 0) {

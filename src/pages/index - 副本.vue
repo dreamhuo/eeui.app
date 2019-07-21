@@ -1,16 +1,127 @@
 <template>
 
     <div class="app">
+
         <navbar class="navbar">
+            <navbar-item type="left" @click="scaner">
+                <icon class="navbar-icon" :eeui="{content: 'tb-scan'}"></icon>
+            </navbar-item>
+
             <navbar-item type="title">
                 <div class="navbar-main">
-                    <text class="navbar-title">我的第一个app</text>
+                    <image class="navbar-logo" src="logo-white.png"></image>
+                    <text class="navbar-title">EEUI</text>
                 </div>
+            </navbar-item>
+
+            <navbar-item type="right" @click="refresh">
+                <icon class="navbar-icon" :eeui="{content: 'md-refresh'}"></icon>
             </navbar-item>
         </navbar>
 
         <scroll-view class="list">
-            <text>这里是内容111</text>
+
+            <scroll-header>
+                <text class="list-title">组件 Components</text>
+            </scroll-header>
+
+            <div class="list-item" v-for="(item, index) in components" :key="index" @click="openUrl(item.url)">
+                <div class="list-item-left">
+                    <icon class="list-left-icon" :eeui="{content: item.icon}"></icon>
+                    <text class="list-left-title">{{item.title}}</text>
+                </div>
+                <div class="list-item-right">
+                    <text class="list-right-title"><{{item.title_en}}></text>
+                    <icon class="list-right-icon"></icon>
+                </div>
+            </div>
+
+            <scroll-header>
+                <text class="list-title">自定义组件 UI</text>
+            </scroll-header>
+
+            <div class="list-item" v-for="(item, index) in uis" :key="index" @click="openUrl(item.url)">
+                <div class="list-item-left">
+                    <icon class="list-left-icon" :eeui="{content: item.icon}"></icon>
+                    <text class="list-left-title">{{item.title}}</text>
+                </div>
+                <div class="list-item-right">
+                    <text class="list-right-title"><{{item.title_en}}></text>
+                    <icon class="list-right-icon"></icon>
+                </div>
+            </div>
+
+            <scroll-header>
+                <text class="list-title">模块 Module</text>
+            </scroll-header>
+
+            <div class="list-item" v-for="(item, index) in module" :key="index" @click="openUrl(item.url)">
+                <div class="list-item-left">
+                    <icon class="list-left-icon" :eeui="{content: item.icon}"></icon>
+                    <text class="list-left-title">{{item.title}}</text>
+                </div>
+                <div class="list-item-right">
+                    <text class="list-right-title">{{item.title_en}}</text>
+                    <icon class="list-right-icon"></icon>
+                </div>
+            </div>
+
+            <scroll-header>
+                <text class="list-title">插件化 Plugins</text>
+            </scroll-header>
+
+            <div class="list-item" v-for="(item, index) in plugin" :key="index" @click="openUrl(item.url)">
+                <div class="list-item-left">
+                    <icon class="list-left-icon" :eeui="{content: item.icon}"></icon>
+                    <text class="list-left-title">{{item.title}}</text>
+                </div>
+                <div class="list-item-right">
+                    <text class="list-right-title">{{item.title_en}}</text>
+                    <icon class="list-right-icon"></icon>
+                </div>
+            </div>
+            <div class="list-item" @click="openWeb('https://eeui.app/markets/')">
+                <div class="list-item-left">
+                    <icon class="list-left-icon" content="tb-more"></icon>
+                    <text class="list-left-title">更多插件</text>
+                </div>
+                <div class="list-item-right">
+                    <text class="list-right-title"></text>
+                    <icon class="list-right-icon"></icon>
+                </div>
+            </div>
+
+            <scroll-header>
+                <text class="list-title">关于 About EEUI</text>
+            </scroll-header>
+
+            <div class="list-item" v-for="(item, index) in abouts" :key="index" @click="openWeb(item.url)">
+                <div class="list-item-left">
+                    <icon class="list-left-icon" :eeui="{content: item.icon}"></icon>
+                    <text class="list-left-title">{{item.title}}</text>
+                </div>
+                <div class="list-item-right">
+                    <text class="list-right-title">{{item.title_en}}</text>
+                    <icon class="list-right-icon"></icon>
+                </div>
+            </div>
+
+            <scroll-header class="list-title-box" v-if="history.length > 0">
+                <text class="list-title">扫码历史</text>
+                <text class="list-subtitle" @click="clearHistory()">清空历史</text>
+            </scroll-header>
+
+            <div v-if="history.length > 0">
+                <div class="list-item" v-for="(text, index) in history" :key="index" @click="openAuto(text)">
+                    <div class="list-item-left">
+                        <text class="list-left-title-history">{{text}}</text>
+                    </div>
+                    <div class="list-item-right">
+                        <icon class="list-right-icon"></icon>
+                    </div>
+                </div>
+            </div>
+
         </scroll-view>
 
     </div>
