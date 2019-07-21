@@ -655,7 +655,7 @@
 					"$(PROJECT_DIR)/eeuiApp/eeui/Utility/Pay/Union/UPPaymentControl",
 					"$(PROJECT_DIR)/eeuiApp/eeui/Utility/Pay/Union/WeChat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.eeui.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = app.demo.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -687,7 +687,7 @@
 					"$(PROJECT_DIR)/eeuiApp/eeui/Utility/Pay/Union/UPPaymentControl",
 					"$(PROJECT_DIR)/eeuiApp/eeui/Utility/Pay/Union/WeChat",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.eeui.demo;
+				PRODUCT_BUNDLE_IDENTIFIER = app.demo.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

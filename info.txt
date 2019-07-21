@@ -9,6 +9,8 @@
     iOS覆盖路径为：platforms/ios/eeuiApp/eeuiApp/Assets.xcassets/LaunchImage.launchimage/
     Android覆盖路径为：platforms/android/eeuiApp/app/src/main/res/drawable-xxxx-xxxxx/
 
+3、App设置
+    根目录下执行命令：eeui setting
 
 
 

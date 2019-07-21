@@ -40,9 +40,9 @@ task clean(type: Delete) {
 
 subprojects {
     ext {
-        applicationId = "app.eeui.demo"
+        applicationId = "app.demo.com"
 
-        versionCode = 1
+        versionCode = 1.0
         versionName = "1.0"
 
         eeuiVersionCode = 5
