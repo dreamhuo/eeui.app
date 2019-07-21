@@ -1,0 +1,6 @@
+﻿1、生成图标工具
+     https://console.eeui.app/#/tools/icons
+     ios图标目录：
+     platforms/ios/eeuiApp/eeuiApp/Assets.xcassets/AppIcon.appiconset
+     安卓图标目录：
+     eeui.app\platforms\android\eeuiApp\app\src\main\res
