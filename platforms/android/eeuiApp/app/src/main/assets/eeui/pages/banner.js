@@ -62,33 +62,25 @@ if(typeof app=="undefined"){app=weex}
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */,
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */,
-/* 8 */
+/* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(9)
+__vue_styles__.push(__webpack_require__(1)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(10)
+__vue_exports__ = __webpack_require__(2)
 
 /* template */
-var __vue_template__ = __webpack_require__(11)
+var __vue_template__ = __webpack_require__(3)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -100,10 +92,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "D:\\study\\eeui.app\\src\\pages\\index.vue"
+__vue_options__.__file = "D:\\study\\eeui.app\\src\\pages\\banner.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-6be49aa4"
+__vue_options__._scopeId = "data-v-ad6f6a6c"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -120,75 +112,31 @@ new Vue(module.exports)
 
 
 /***/ }),
-/* 9 */
+/* 1 */
 /***/ (function(module, exports) {
 
 module.exports = {
   "app": {
     "width": "750",
-    "flex": 1,
-    "backgroundColor": "#ffffff"
-  },
-  "list": {
-    "width": "750",
     "flex": 1
   },
-  "list-title": {
-    "marginTop": "24",
-    "marginBottom": "12",
-    "paddingTop": "36",
-    "paddingRight": "24",
-    "paddingBottom": "24",
-    "paddingLeft": "24",
-    "fontSize": "28",
-    "color": "#757575"
-  },
-  "list-item": {
+  "banner": {
     "width": "750",
-    "flexDirection": "row"
+    "height": "420"
   },
-  "button": {
-    "fontSize": "24",
-    "marginLeft": "37.5",
-    "marginRight": "37.5",
-    "marginBottom": "20",
-    "width": "300",
-    "height": "80"
-  },
-  "list-input-item": {
+  "banner-frame": {
     "width": "750",
-    "height": "90",
-    "flexDirection": "row",
-    "alignItems": "center",
-    "borderBottomColor": "#e4e4e4",
-    "borderBottomStyle": "solid",
-    "borderBottomWidth": "1"
+    "height": "420",
+    "position": "relative"
   },
-  "cell": {
-    "paddingLeft": "50",
-    "fontSize": "24",
-    "color": "#666666"
-  },
-  "switch": {
-    "marginRight": "40"
-  },
-  "input": {
-    "paddingRight": "50",
-    "flex": 1,
-    "height": "90",
-    "textAlign": "right",
-    "fontSize": "28"
-  },
-  "demo-item": {
+  "banner-image": {
     "width": "750",
-    "paddingTop": "30",
-    "paddingBottom": "30",
-    "alignItems": "center"
+    "height": "420"
   }
 }
 
 /***/ }),
-/* 10 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -233,109 +181,47 @@ Object.defineProperty(exports, "__esModule", {
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 var eeui = app.requireModule('eeui');
 
 exports.default = {
+    data: function data() {
+        return {
+            imageList: [{ src: 'https://gd2.alicdn.com/bao/uploaded/i2/T14H1LFwBcXXXXXXXX_!!0-item_pic.jpg' }, { src: 'https://gd1.alicdn.com/bao/uploaded/i1/TB1PXJCJFXXXXciXFXXXXXXXXXX_!!0-item_pic.jpg' }, { src: 'https://gd3.alicdn.com/bao/uploaded/i3/TB1x6hYLXXXXXazXVXXXXXXXXXX_!!0-item_pic.jpg' }]
+        };
+    },
+
 
     methods: {
-        goBanner: function goBanner(res) {
-            //示例②
-            eeui.openPage({
-                pageName: 'banner',
-                pageType: 'app',
-                url: 'banner.js'
-            }, function (result) {
-                eeui.toast("到banner页看一看");
-            });
+        itemClick: function itemClick(res) {
+            eeui.toast("点击" + (res.position + 1) + "项");
         }
     }
 };
 
 /***/ }),
-/* 11 */
+/* 3 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: ["app"]
-  }, [_c('scroller', {
-    staticClass: ["list"]
-  }, [_c('text', {
-    staticClass: ["list-title"]
-  }, [_vm._v("预设样式")]), _c('div', {
-    staticClass: ["list-item"]
-  }, [_c('button', {
-    staticClass: ["button"],
-    attrs: {
-      "eeui": {
-        text: '默认'
-      }
-    },
+  }, [_c('banner', {
+    staticClass: ["banner"],
     on: {
-      "click": _vm.goBanner
+      "itemClick": _vm.itemClick
     }
-  }), _c('button', {
-    staticClass: ["button"],
-    attrs: {
-      "eeui": {
-        text: '红色',
-        model: 'red'
+  }, _vm._l((_vm.imageList), function(img) {
+    return _c('div', {
+      staticClass: ["banner-frame"]
+    }, [_c('image', {
+      staticClass: ["banner-image"],
+      attrs: {
+        "resize": "cover",
+        "src": img.src
       }
-    }
-  })], 1)])])
+    })])
+  }))], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 
